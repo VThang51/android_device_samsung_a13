@@ -2,10 +2,12 @@
 # mount point    fstype     device    device2    flags
 
 # Logical partitions
-system     /system     f2fs    wait,logical,first_stage_mount
-vendor     /vendor     f2fs    wait,logical,first_stage_mount
-product    /product    f2fs    wait,logical,first_stage_mount
-odm        /odm        f2fs    wait,logical,first_stage_mount
+system     /system     f2fs     ro    avb=vbmeta,logical,first_stage_mount
+system     /system     ext4     ro    avb=vbmeta,logical,first_stage_mount
+system     /system     erofs    ro    avb=vbmeta,logical,first_stage_mount
+vendor     /vendor     f2fs     ro    avb,logical,first_stage_mount
+product    /product    f2fs     ro    avb,logical,first_stage_mount
+odm        /odm        f2fs     ro    avb,logical,first_stage_mount
 
 # Linked partitions
 /system_image     emmc    /dev/block/bootdevice/by-name/system     flags=backup=0;flashimg;display="System Image"
