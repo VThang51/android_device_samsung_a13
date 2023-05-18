@@ -1,10 +1,7 @@
 # TWRP device tree for Samsung Galaxy A13 aka a13
 
 ## Kernel source 
-Available at https://github.com/VThang51/android_kernel_samsung_a13xx
-
-## Platform source
-Available at https://github.com/VThang51/android_platform_samsung_a13xx
+Available at [here](https://github.com/VThang51/android_kernel_samsung_a13xx)
 
 ## How to build
 This was tested and it's fully compatible with [minimal manifest twrp](https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp).
@@ -16,8 +13,14 @@ git clone -b master https://github.com/VThang51/android_device_samsung_a13.git d
 3. To build:
 ```bash
 export ALLOW_MISSING_DEPENDENCIES=true
+```
+```bash
 . build/envsetup.sh
+```
+```bash
 lunch twrp_a13-eng
+```
+```bash
 mka recoveryimage
 ```
 Or use seamless command:
