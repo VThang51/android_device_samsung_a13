@@ -1,10 +1,41 @@
-on init
-    write /proc/sys/kernel/hung_task_timeout_secs 0
-
 on late-init
+    setprop sys.usb.controller 13600000.dwc3
     setprop ro.debuggable 1
     setprop service.adb.root 1
     setprop sys.usb.configfs 1
     setprop sys.usb.config adb
 
+on init
+    write /proc/sys/kernel/hung_task_timeout_secs 0
+    start watchdogd
+
+    # unlink /efs > /mnt/vendor/efs
+    rm /efs
+    mkdir /efs
+    mkdir /sec_efs
+
+# to cut charging battery path
+    write /sys/class/power_supply/battery/siop_level 0
+
 on boot
+    setprop ro.boot.vbmeta.avb_version 1.1
+    setprop ro.boot.avb_version 1.1
+
+on fs
+    wait /dev/block/platform/12100000.dwmmc0
+    symlink /dev/block/platform/12100000.dwmmc0 /dev/block/bootdevice
+    symlink /dev/block/platform/12100000.dwmmc0/by-name /dev/block/by-name
+
+#@RECOVERY [For reboot reason.
+    symlink /dev/block/platform/12100000.dwmmc0/by-name/param /dev/block/param
+    chown root system /dev/block/param
+    chmod 0666 /dev/block/param
+#]
+
+    export ANDROID_ROOT /system_root
+
+# Set watchdog timer to 40 seconds and pet it every 10 seconds to get a 30 second margin
+service watchdogd /system/bin/watchdogd 10 30
+    class core
+    oneshot
+    seclabel u:r:watchdogd:s0
