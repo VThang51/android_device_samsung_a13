@@ -13,14 +13,8 @@ git clone -b master https://github.com/VThang51/android_device_samsung_a13.git d
 3. To build:
 ```bash
 export ALLOW_MISSING_DEPENDENCIES=true
-```
-```bash
 . build/envsetup.sh
-```
-```bash
 lunch twrp_a13-eng
-```
-```bash
 mka recoveryimage
 ```
 Or use seamless command:
