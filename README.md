@@ -4,20 +4,27 @@
 Available at [here](https://github.com/VThang51/android_kernel_samsung_a13xx)
 
 ## How to build
-This was tested and it's fully compatible with [minimal manifest twrp](https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp).
-1. Set up the build environment following instructions from [here](https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp/blob/twrp-12.1/README.md#getting-started).
-2. In the root folder of cloned repo you need to clone the device tree:
+1. Create a working directory at `~`
+```bash
+mkdir ~/TWRP && cd ~/TWRP
+```
+2. Initialize your local repository using AOSP tree to build TWRP
+```bash
+repo init -u https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp.git -b twrp-12.1
+```
+Or a more space-saving solution
+```bash
+repo init --depth=1 -u https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp.git -b twrp-12.1
+```
+3. Sync up
+```bash
+repo sync
+```
+4. Clone the device tree
 ```bash
 git clone -b master https://github.com/VThang51/android_device_samsung_a13.git device/samsung/a13
 ```
-3. To build:
+5. Build it
 ```bash
-export ALLOW_MISSING_DEPENDENCIES=true
-. build/envsetup.sh
-lunch twrp_a13-eng
-mka recoveryimage
-```
-Or use seamless command:
-```bash
-export ALLOW_MISSING_DEPENDENCIES=true && . build/envsetup.sh && lunch twrp_a13-eng && mka recoveryimage
+cd ~/TWRP && export ALLOW_MISSING_DEPENDENCIES=true && . build/envsetup.sh && lunch twrp_a13-eng && mka recoveryimage
 ```
