@@ -1,9 +1,12 @@
 # TWRP device tree for Samsung Galaxy A13 aka a13
 
-## Kernel source 
+## Kernel Source 
 Available at [here](https://github.com/VThang51/android_kernel_samsung_a13xx)
 
-## How to build
+## Platform Source
+Available at [here](https://github.com/VThang51/android_platform_samsung_a13)
+
+## How To Build
 1. Create a working directory at `~`
 ```bash
 mkdir ~/TWRP && cd ~/TWRP
