@@ -25,7 +25,7 @@ repo sync
 ```
 4. Clone the device tree
 ```bash
-git clone -b TWRP https://github.com/VThang51/android_device_samsung_a13.git device/samsung/a13
+git clone -b twrp-12.1_v1 https://github.com/VThang51/android_device_samsung_a13.git device/samsung/a13
 ```
 5. Build it
 ```bash
