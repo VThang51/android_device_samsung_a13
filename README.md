@@ -1,4 +1,4 @@
-# TWRP device tree for Samsung Galaxy A13 aka a13
+# TWRP device tree for Samsung Galaxy A13 (SM-A135x)
 
 ## Kernel Source 
 Available at [here](https://github.com/VThang51/android_kernel_samsung_a13xx)
@@ -30,4 +30,43 @@ git clone -b twrp-12.1_v1 https://github.com/VThang51/android_device_samsung_a13
 5. Build it
 ```bash
 cd ~/TWRP && export ALLOW_MISSING_DEPENDENCIES=true && . build/envsetup.sh && lunch twrp_a13-eng && mka recoveryimage
+```
+## What was active in this TWRP device tree?
+```bash
+A: Active
+P: Partial
+
+Blocking checks
+- [ ] Correct screen/recovery size
+- [P] Working Touch, screen
+- [P] Backup to internal/microSD
+- [P] Restore from internal/microSD
+- [A] reboot to system
+- [P] ADB
+
+Medium checks
+- [ ] update.zip sideload
+- [ ] UI colors (red/blue inversions)
+- [ ] Screen goes off and on
+- [P] F2FS/EXT4 Support, exFAT/NTFS where supported
+- [A] all important partitions listed in mount/backup lists
+- [ ] backup/restore to/from external (USB-OTG) storage (not supported by the device)
+- [ ] backup/restore to/from adb (https://gerrit.omnirom.org/#/c/15943/)
+- [ ] decrypt /data
+- [ ] Correct date
+
+Minor checks
+- [ ] MTP export
+- [A] reboot to bootloader
+- [A] reboot to recovery
+- [A] poweroff
+- [P] battery level
+- [ ] temperature
+- [ ] encrypted backups
+- [A] input devices via USB (USB-OTG) - [A] keyboard, mouse and disks (not supported by the device)
+- [ ] USB mass storage export
+- [ ] set brightness
+- [ ] vibrate
+- [ ] screenshot
+- [ ] partition SD card
 ```
