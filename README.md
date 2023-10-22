@@ -32,10 +32,9 @@ git clone -b twrp-12.1_v1 https://github.com/VThang51/android_device_samsung_a13
 cd ~/TWRP && export ALLOW_MISSING_DEPENDENCIES=true && . build/envsetup.sh && lunch twrp_a13-eng && mka recoveryimage
 ```
 ## What was active in this TWRP device tree?
+- A: Active
+- P: Partially Active
 ```bash
-A: Active
-P: Partially Active
-
 Blocking checks
 - [A] Correct screen/recovery size
 - [P] Working Touch, screen
