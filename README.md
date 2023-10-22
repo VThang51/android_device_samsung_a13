@@ -34,10 +34,10 @@ cd ~/TWRP && export ALLOW_MISSING_DEPENDENCIES=true && . build/envsetup.sh && lu
 ## What was active in this TWRP device tree?
 ```bash
 A: Active
-P: Partial
+P: Partially Active
 
 Blocking checks
-- [ ] Correct screen/recovery size
+- [A] Correct screen/recovery size
 - [P] Working Touch, screen
 - [P] Backup to internal/microSD
 - [P] Restore from internal/microSD
@@ -47,7 +47,7 @@ Blocking checks
 Medium checks
 - [ ] update.zip sideload
 - [ ] UI colors (red/blue inversions)
-- [ ] Screen goes off and on
+- [P] Screen goes off and on
 - [P] F2FS/EXT4 Support, exFAT/NTFS where supported
 - [A] all important partitions listed in mount/backup lists
 - [ ] backup/restore to/from external (USB-OTG) storage (not supported by the device)
@@ -61,12 +61,12 @@ Minor checks
 - [A] reboot to recovery
 - [A] poweroff
 - [P] battery level
-- [ ] temperature
-- [ ] encrypted backups
+- [A] temperature
+- [A] encrypted backups
 - [A] input devices via USB (USB-OTG) - [A] keyboard, mouse and disks (not supported by the device)
-- [ ] USB mass storage export
-- [ ] set brightness
-- [ ] vibrate
-- [ ] screenshot
+- [P] USB mass storage export
+- [A] set brightness
+- [A] vibrate
+- [A] screenshot
 - [ ] partition SD card
 ```
