@@ -40,7 +40,7 @@ Blocking checks
 - [P] Working Touch, screen
 - [P] Backup to internal/microSD
 - [P] Restore from internal/microSD
-- [A] reboot to system
+- [A] Reboot to system
 - [P] ADB
 
 Medium checks
@@ -48,25 +48,25 @@ Medium checks
 - [ ] UI colors (red/blue inversions)
 - [P] Screen goes off and on
 - [P] F2FS/EXT4 Support, exFAT/NTFS where supported
-- [A] all important partitions listed in mount/backup lists
-- [ ] backup/restore to/from external (USB-OTG) storage (not supported by the device)
-- [ ] backup/restore to/from adb (https://gerrit.omnirom.org/#/c/15943/)
-- [ ] decrypt /data
-- [ ] Correct date
+- [A] All important partitions listed in mount/backup lists
+- [P] Backup/restore to/from external (USB-OTG) storage (not supported by the device)
+- [ ] Backup/restore to/from adb (https://gerrit.omnirom.org/#/c/15943/)
+- [ ] Decrypt /data
+- [P] Correct date
 
 Minor checks
 - [ ] MTP export
-- [A] reboot to bootloader
-- [A] reboot to recovery
-- [A] poweroff
-- [P] battery level
-- [A] temperature
-- [A] encrypted backups
-- [A] input devices via USB (USB-OTG)
-- [A] keyboard, mouse and disks (not supported by the device)
+- [A] Reboot to bootloader
+- [A] Reboot to recovery
+- [A] Poweroff
+- [P] Battery level
+- [A] Temperature
+- [A] Rncrypted backups
+- [A] Input devices via USB (USB-OTG)
+- [A] Keyboard, mouse and disks (not supported by the device)
 - [P] USB mass storage export
-- [A] set brightness
-- [A] vibrate
-- [A] screenshot
-- [ ] partition SD card
+- [A] Set brightness
+- [A] Vibrate
+- [A] Screenshot
+- [ ] Partition SD card
 ```
