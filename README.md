@@ -25,12 +25,13 @@ repo sync
 ```
 4. Clone the device tree
 ```bash
-git clone -b twrp-12.1_v1 https://github.com/VThang51/android_device_samsung_a13.git device/samsung/a13
+git clone -b twrp-12.1 https://github.com/VThang51/android_device_samsung_a13.git device/samsung/a13
 ```
 5. Build it
 ```bash
 cd ~/TWRP && export ALLOW_MISSING_DEPENDENCIES=true && . build/envsetup.sh && lunch twrp_a13-eng && mka recoveryimage
 ```
+
 ## What was active in this TWRP device tree?
 - A: Active
 - P: Partially Active
