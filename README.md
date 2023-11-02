@@ -33,8 +33,9 @@ cd ~/TWRP && export ALLOW_MISSING_DEPENDENCIES=true && . build/envsetup.sh && lu
 ```
 
 ## What was active in this TWRP device tree?
-- A: Active
-- P: Partially Active
+- `[A]` Active
+- `[P]` Partially Active
+- `[ ]` Not tested / Not working
 ```bash
 Blocking checks
 - [A] Correct screen/recovery size
